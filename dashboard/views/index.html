@@ -9,42 +9,48 @@
         .sidebar { background: #1e3a4a; padding: 20px; border-radius: 8px; }
         .main { background: #1e3a4a; padding: 20px; border-radius: 8px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 10px; border-bottom: 1px solid #2a5068; text-align: left; }
-        .tag-success { background: #2ecc71; padding: 2px 8px; border-radius: 12px; font-size: 12px; color: #000; }
-        .tag-pending { background: #f1c40f; padding: 2px 8px; border-radius: 12px; font-size: 12px; color: #000; }
-        a { color: #3498db; text-decoration: none; }
+        th, td { padding: 12px; border-bottom: 1px solid #2a5068; text-align: left; }
+        .tag-success { background: #2ecc71; padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #000; font-weight:bold;}
+        .tag-pending { background: #f1c40f; padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #000; font-weight:bold;}
+        a { color: #3498db; text-decoration: none; font-weight: bold;}
+        a:hover { color: #e8c860; }
+        .btn-view { background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 4px; font-size: 12px; border: 1px solid #3498db;}
     </style>
 </head>
 <body>
-    <div style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
         <div>
-            <h1>FESTIVALES NÁUTICOS MX × CORE-62</h1>
-            <p>Seguimiento Institucional · Estados + Marcas</p>
+            <h1 style="margin:0; color:#e8c860;">FESTIVALES NÁUTICOS MX × CORE-62</h1>
+            <p style="margin:5px 0 0 0; color:#a8d8e8;">Seguimiento Institucional · Estados + Marcas</p>
         </div>
         <a href="/" style="background:#e74c3c; color:white; padding:10px 15px; border-radius:5px;">← Salir al Sitio Público</a>
     </div>
     <div class="grid">
         <div class="sidebar">
-            <h3>Filtros Activos</h3>
-            <ul>
-                <li>32 Propuestas Estatales</li>
-                <li>19 Marcas Invitadas</li>
+            <h3 style="color:#e8c860; border-bottom: 1px solid #2a5068; padding-bottom:10px;">Resumen</h3>
+            <ul style="list-style:none; padding:0; color:#a8d8e8;">
+                <li style="margin-bottom:10px;">📊 32 Propuestas Estatales</li>
+                <li style="margin-bottom:10px;">🏢 19 Marcas Invitadas</li>
+                <li style="margin-bottom:10px;">✅ 4 Confirmadas</li>
             </ul>
         </div>
         <div class="main">
-            <h2>Propuestas de Estados</h2>
+            <h2 style="color:#e8c860;">Propuestas Institucionales (Estados)</h2>
             <table>
-                <tr><th>Estado</th><th>Propuesta</th><th>Estatus</th></tr>
-                <tr><td>Michoacán</td><td>Embajador turístico permanente</td><td><span class="tag-success">Presentada</span></td></tr>
-                <tr><td>Puebla</td><td>Historia, sabor y tradición</td><td><span class="tag-pending">En seguimiento</span></td></tr>
-                <tr><td>Querétaro</td><td>Historia, Viñedos y Tradición</td><td><span class="tag-success">Presentada</span></td></tr>
+                <tr><th>Estado</th><th>Propuesta</th><th>Estatus</th><th>Acción</th></tr>
+                <tr><td>Michoacán</td><td>El alma de México en el mar</td><td><span class="tag-success">Presentada</span></td><td><a href="/propuestas/estados/michoacan.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
+                <tr><td>Puebla</td><td>Historia, sabor y tradición</td><td><span class="tag-pending">En seguimiento</span></td><td><a href="/propuestas/estados/puebla.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
+                <tr><td>Querétaro</td><td>Historia, Viñedos y Tradición</td><td><span class="tag-success">Confirmada</span></td><td><a href="/propuestas/estados/queretaro.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
+                <tr><td>Jalisco</td><td>Tradición y Tequila en el Mar</td><td><span class="tag-pending">Pendiente</span></td><td><a href="/propuestas/estados/jalisco.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
             </table>
             
-            <h2 style="margin-top: 40px;">Propuestas Comerciales</h2>
+            <h2 style="color:#e8c860; margin-top: 40px;">Propuestas Comerciales (Marcas)</h2>
             <table>
-                <tr><th>Marca</th><th>Proyecto</th><th>Estatus</th></tr>
-                <tr><td>EXA FM</td><td><a href="/propuestas/exa-fm.html" target="_blank">EXA Music Boat 2027 ↗</a></td><td><span class="tag-pending">En negociación</span></td></tr>
-                <tr><td>BBVA</td><td>Bonos Azules</td><td><span class="tag-pending">Pendiente</span></td></tr>
+                <tr><th>Marca</th><th>Proyecto</th><th>Estatus</th><th>Acción</th></tr>
+                <tr><td>EXA FM</td><td>EXA Music Boat 2027</td><td><span class="tag-pending">En negociación</span></td><td><a href="/propuestas/marcas/exa-fm.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
+                <tr><td>Heineken</td><td>Experiencia Premium</td><td><span class="tag-success">Presentada</span></td><td><a href="/propuestas/marcas/heineken.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
+                <tr><td>BBVA</td><td>Bonos Azules</td><td><span class="tag-pending">Pendiente</span></td><td><a href="/propuestas/marcas/bbva.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
+                <tr><td>CONCANACO</td><td>El comercio organizado</td><td><span class="tag-success">Confirmada</span></td><td><a href="/propuestas/marcas/concanaco.html" target="_blank" class="btn-view">Ver Propuesta ↗</a></td></tr>
             </table>
         </div>
     </div>

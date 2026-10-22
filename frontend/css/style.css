@@ -32,7 +32,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: rgba
 
 /* HERO */
 #hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: url('https://media.traveler.es/photos/642157573da2de76531fb10e/16:9/w_2240,c_limit/The%20arch%204%20RGB%20retoc.jpg?w=1600&q=80') center/cover no-repeat; transform: scale(1.05); animation: heroZoom 20s ease-in-out infinite alternate; }
+.hero-bg { position: absolute; inset: 0; background: url('../assets/img/hero-bg.jpg') center/cover no-repeat; transform: scale(1.05); animation: heroZoom 20s ease-in-out infinite alternate; }
 @keyframes heroZoom { 0% { transform: scale(1.05); } 100% { transform: scale(1.12); } }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(115deg, rgba(6,12,24,.88) 0%, rgba(12,45,69,.75) 45%, rgba(13,74,110,.45) 100%); }
 .hero-inner { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
@@ -64,7 +64,7 @@ section { position: relative; z-index: 1; padding: 7rem 2.5rem; }
 
 /* GRID CONTENT */
 .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-.fest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 3rem; }
+.fest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
 .aud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 .core-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 
@@ -76,9 +76,11 @@ ul li::before { content: '◆'; color: var(--gold); position: absolute; left: 0;
 .ul-wh li { color: rgba(255,255,255,.72); }
 
 /* CARDS */
-.card { background: #fff; border-radius: 10px; padding: 2rem; box-shadow: 0 6px 32px rgba(12,29,46,.1); transition: transform .35s; }
+.card { background: #fff; border-radius: 10px; padding: 2rem; box-shadow: 0 6px 32px rgba(12,29,46,.1); transition: transform .35s; display: flex; flex-direction: column;}
 .card:hover { transform: translateY(-8px); }
 .card-dark { background: rgba(255,255,255,.04); border-left: 3px solid var(--gold); padding: 1.2rem 1.4rem; border-radius: 0 4px 4px 0; color: white;}
+.btn-outline { padding: .7rem 1.5rem; border: 1.5px solid var(--gold); color: var(--navy); text-decoration: none; font-weight: 600; border-radius: 3px; display: inline-block; text-align: center; margin-top: auto;}
+.btn-outline:hover { background: var(--gold); color: white; }
 
 /* TABLE */
 .aud-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
