@@ -11,18 +11,18 @@ const verifyCore62Auth = (req, res, next) => {
     else res.status(401).send('Acceso denegado: Se requiere autenticación CORE-62');
 };
 
-// Asegurar ruta al frontend
+// 1. CAPA PÚBLICA: Solo sirve lo que está en /frontend
 const frontendPath = path.resolve(__dirname, '../frontend');
 app.use(express.static(frontendPath));
 
-// Forzar la ruta raíz a servir el index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
-});
-
-// Dashboard Privado
-app.use('/dashboard', verifyCore62Auth, express.static(path.join(__dirname, '../dashboard/views')));
+// 2. CAPA PRIVADA UNIFICADA: Todo lo que no es público vive dentro de /dashboard
+// Esto protege el tablero (/dashboard), los 32 estados (/dashboard/estados/...),
+// las 19 marcas (/dashboard/marcas/...) y los documentos (/dashboard/documentos/...)
+const dashboardPath = path.resolve(__dirname, '../dashboard');
+app.use('/dashboard', verifyCore62Auth, express.static(dashboardPath));
 
 app.listen(PORT, () => {
-    console.log(`Servidor CORE-62 corriendo en http://localhost:${PORT}`);
+    console.log(`🚀 Servidor CORE-62 activo en http://localhost:${PORT}`);
+    console.log(`🌐 Sitio Público: http://localhost:${PORT}/`);
+    console.log(`🔒 Dashboard y Propuestas Privadas: http://localhost:${PORT}/dashboard`);
 });
