@@ -11,13 +11,19 @@
 </head>
 <body>
 
+    <!-- BARRA DE PROGRESO DE LECTURA (#prog) Y BOTÓN FLOTANTE (#scrolltop) -->
+    <div id="prog"></div>
+    <a href="#hero" id="scrolltop" aria-label="Volver arriba">↑</a>
+
     <!-- BARRA DE NAVEGACIÓN STICKY -->
     <nav>
         <div class="nav-inner">
-            <div class="nav-brand">
+            <a href="#hero" class="nav-brand">
+                <img src="/assets/img/logo-final.png" onerror="this.onerror=null;this.src='/assets/img/logo-fnmx.svg';" alt="Logo Festivales Náuticos MX" class="nav-brand-logo">
                 <span>FESTIVALES <span>NÁUTICOS</span> MX</span>
-            </div>
+            </a>
             <div class="nav-div"></div>
+            <button type="button" class="nav-menu-btn" id="navMenuBtn" aria-expanded="false" aria-label="Abrir menú">☰</button>
             <ul class="nav-links">
                 <li><a href="#concepto">Concepto</a></li>
                 <li><a href="#festivales">Festivales 2026</a></li>
@@ -26,26 +32,64 @@
                 <li><a href="#core62">CORE-62</a></li>
                 <li><a href="#invitados">Invitados</a></li>
                 <li><a href="#embarcaciones">Embarcaciones</a></li>
+                <li><a href="#andadores">Andadores y Mapa</a></li>
                 <li><a href="#patrocinio">Ser Patrocinador</a></li>
             </ul>
             <a href="/dashboard" class="nav-cta">Acceso Dashboard</a>
         </div>
     </nav>
 
+    <!-- CINTILLO ANIMADO SUPERIOR (TICKER) -->
+    <div class="ticker">
+        <div class="ticker-t">
+            <div class="ticker-i">
+                <span class="ticker-gem">⬡</span>Los Cabos, BCS · Noviembre–Diciembre 2026
+                <span class="ticker-gem">⬡</span>Altares en el Mar — 6ª Edición (1–4 Nov)
+                <span class="ticker-gem">⬡</span>Mar &amp; Christmas — 8ª Edición (19–21 Dic)
+                <span class="ticker-gem">⬡</span>30,000 Asistentes Proyectados
+                <span class="ticker-gem">⬡</span>8 Cruceros Internacionales en Bahía
+                <span class="ticker-gem">⬡</span>10 Andadores Exclusivos con Embarcación Incluida
+                <span class="ticker-gem">⬡</span>+50 Aliados de Difusión Digital · Estrategia CORE-62
+                <span class="ticker-gem">⬡</span>¡Un Mar de Tradiciones!
+            </div>
+            <div class="ticker-i">
+                <span class="ticker-gem">⬡</span>Los Cabos, BCS · Noviembre–Diciembre 2026
+                <span class="ticker-gem">⬡</span>Altares en el Mar — 6ª Edición (1–4 Nov)
+                <span class="ticker-gem">⬡</span>Mar &amp; Christmas — 8ª Edición (19–21 Dic)
+                <span class="ticker-gem">⬡</span>30,000 Asistentes Proyectados
+                <span class="ticker-gem">⬡</span>8 Cruceros Internacionales en Bahía
+                <span class="ticker-gem">⬡</span>10 Andadores Exclusivos con Embarcación Incluida
+                <span class="ticker-gem">⬡</span>+50 Aliados de Difusión Digital · Estrategia CORE-62
+                <span class="ticker-gem">⬡</span>¡Un Mar de Tradiciones!
+            </div>
+        </div>
+    </div>
+
     <!-- CABECERA / HERO PRINCIPAL -->
-    <header class="internal-header">
-        <div class="subtitle">Los Cabos · BCS · México 2026 · ¡Un Mar de Tradiciones!</div>
-        <h1 class="h-serif">La Plataforma Náutica más Poderosa de México</h1>
-        <p>Donde las tradiciones de México se reinterpretan desde el mar — un ecosistema de experiencias inmersivas que conecta marcas, culturas y destinos en el escenario más espectacular del mundo.</p>
-        <div class="highlight-box">
-            <h4>Los Cabos, BCS · Noviembre–Diciembre 2026</h4>
-            <p>Altares en el Mar — 6ª Edición · Mar &amp; Christmas — 8ª Edición · 30,000 Asistentes Proyectados · 8 Cruceros Internacionales · 10 Andadores Exclusivos con Embarcación Incluida · +50 Aliados de Difusión Digital · Estrategia Digital CORE-62.</p>
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+            <div>
+                <div class="hero-eyebrow">
+                    <div class="hero-eyebrow-line"></div>
+                    <span class="hero-eyebrow-text">Los Cabos · BCS · México 2026 · ¡Un Mar de Tradiciones!</span>
+                </div>
+                <h1 class="hero-title">La Plataforma Náutica más <span class="accent">Poderosa</span> de México</h1>
+                <p class="hero-sub">Donde las tradiciones de México se reinterpretan desde el mar — un ecosistema de experiencias inmersivas que conecta marcas, culturas y destinos en el escenario más espectacular del mundo.</p>
+                <div class="hero-actions">
+                    <a href="#patrocinio" class="btn-gold">Conocer la Propuesta</a>
+                    <a href="#embarcaciones" class="btn-outline">Ver las 10 Embarcaciones</a>
+                </div>
+            </div>
+            <div class="hero-emblem-box">
+                <img src="/assets/img/logo-final.png" onerror="this.onerror=null;this.src='/assets/img/logo-fnmx.svg';" alt="Emblema Oficial Festivales Náuticos MX" class="hero-logo-big">
+                <h3 class="h-serif" style="color:var(--gold-l); margin-bottom:0.5rem;">Temporada Oficial 2026</h3>
+                <p class="p-wh" style="font-size:0.92rem; margin-bottom:0.8rem;">Altares en el Mar (6ª Edición) &amp; Mar &amp; Christmas (8ª Edición) · Bahía de Cabo San Lucas</p>
+                <img src="/assets/img/cropped-2-CORE62.png" onerror="this.onerror=null;this.src='/assets/img/logo-core62.svg';" alt="Estrategia Digital CORE-62" style="height:34px; margin:0 auto; display:block;">
+            </div>
         </div>
-        <div class="grid-2">
-            <a href="#patrocinio" class="btn-gold">Conocer la Propuesta</a>
-            <a href="#invitados" class="btn-outline">Invitados Especiales</a>
-        </div>
-    </header>
+    </section>
 
     <!-- RESUMEN EJECUTIVO DE INDICADORES -->
     <section class="s-navy">
@@ -81,7 +125,7 @@
             </div>
             <h2 class="h-serif">El mar como escenario de poder</h2>
             <div class="concept-grid">
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Posicionamiento y Tradición desde el Océano</h3>
                     <p>Festivales Náuticos MX es la única plataforma de posicionamiento en México que convierte el mar en el escenario más poderoso para conectar marcas con audiencias a través de experiencias memorables.</p>
                     <p>Su eje central es un desfile de embarcaciones temáticas y artísticas donde las tradiciones de México se reinterpretan desde el mar — un detonador de contenido, turismo y conversación nacional e internacional.</p>
@@ -90,7 +134,7 @@
                         <p>Activación Territorial · Contenido Viral · Diplomacia Cultural · Economía Azul · Turismo Premium</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Para las marcas, representa:</h3>
                     <ul>
                         <li>Integración orgánica en experiencias culturales de alto valor emocional</li>
@@ -115,19 +159,33 @@
             <p class="p-wh">Dos celebraciones consolidadas e institucionalizadas en la Bahía y Puerto de Cabo San Lucas, Baja California Sur.</p>
 
             <div class="grid-2">
-                <div class="card-dark">
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/1.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=80';" alt="Altares en el Mar 6ª Edición">
+                        <div class="boat-badges">
+                            <span class="boat-badge">1–4 Noviembre 2026</span>
+                            <span class="boat-badge boat-badge-cap">6ª Edición</span>
+                        </div>
+                    </div>
                     <h3 class="h-serif">6ª Edición · Día de Muertos — Altares en el Mar</h3>
                     <p class="p-wh">Festival náutico con desfile de embarcaciones artísticas, actividades culturales en tierra y mar.</p>
                     <ul>
                         <li><strong>Fechas:</strong> 1, 2, 3 y 4 de Noviembre, 2026</li>
                         <li><strong>Lugar:</strong> Bahía y Puerto de Cabo San Lucas, B.C.S.</li>
-                        <li><strong>Concepto:</strong> Festival náutico con desfile de embarcaciones artísticas, actividades culturales en tierra y mar</li>
                         <li><strong>Horario:</strong> 12:00 – 22:00 hrs</li>
                         <li><strong>Activación:</strong> Encuentro de Grandes Deportistas Náuticas · La Gran Trajinera de CDMX</li>
-                        <li><strong>Eje Cultural:</strong> Día de Muertos</li>
+                        <li><strong>Eje Cultural:</strong> Día de Muertos y EL Retorno de Chalchiuhticlue</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/2.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80';" alt="Mar & Christmas 8ª Edición">
+                        <div class="boat-badges">
+                            <span class="boat-badge">19–21 Diciembre 2026</span>
+                            <span class="boat-badge boat-badge-cap">8ª Edición</span>
+                        </div>
+                    </div>
+                <div class="card-dark fade-in">
                     <h3 class="h-serif">8ª Edición · Navidad &amp; Economía Azul — Mar &amp; Christmas</h3>
                     <p class="p-wh">Celebración decembrina frente al mar y plataforma de lanzamiento internacional hacia 2027.</p>
                     <ul>
@@ -136,7 +194,6 @@
                         <li><strong>Festividad:</strong> Navidad · Lanzamiento 2027 "Economía Azul"</li>
                         <li><strong>Horario:</strong> 12:00 – 22:00 hrs</li>
                         <li><strong>Países Invitados:</strong> España, Filipinas, Panamá y Francia</li>
-                        <li><strong>Proyección:</strong> Economía Azul 2027</li>
                     </ul>
                 </div>
             </div>
@@ -155,7 +212,7 @@
             <p>La audiencia de FNMX 2026 combina visitantes locales, turismo de temporada, cruceristas internacionales y turistas atraídos específicamente por el festival (30K Asistentes 4 días · 12K Cruceristas · 8 Cruceros internacionales).</p>
 
             <div class="grid-2">
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Proyección de Afluencia por Segmento</h3>
                     <table>
                         <thead>
@@ -199,7 +256,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Demografía y Perfil Socioeconómico</h3>
                     <div class="highlight-box">
                         <h4>Perfil Socioeconómico</h4>
@@ -234,51 +291,51 @@
             <p class="p-wh">+50 Aliados de Difusión · 40 Embarcaciones/Festival · 2 Festivales/Año · 360° Presencia de Marca · QR en cada punto.</p>
 
             <div class="fest-grid">
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>01 · Exclusividad Total de Categoría</h3>
                     <p class="p-wh">Naming Oficial "SU MARCA Presenta" — posición única e irrepetible en el festival.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>02 · Presencia Multifestival</h3>
                     <p class="p-wh">Mar &amp; Christmas, Altares en el Mar y eventos especiales en todos los puertos.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>03 · Calendario Anual</h3>
                     <p class="p-wh">Presencia permanente en el calendario de festivales del año completo.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>04 · 50 Mexicráneos en Exposición</h3>
                     <p class="p-wh">Esculturas icónicas de la tradición mexicana con identidad de su marca.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>05 · Pantalla HBE — 10 Lanzamientos</h3>
                     <p class="p-wh">Presencia audiovisual premium en el corazón del festival.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>06 · Activaciones Musicales</h3>
                     <p class="p-wh">Cantantes de ópera e instrumentos de cuerda bajo su marca.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>07 · Branding Total</h3>
                     <p class="p-wh">Embarcaciones, altares, escenarios, zonas VIP y activaciones de marca.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>08 · Árboles Navideños</h3>
                     <p class="p-wh">Instalaciones monumentales en Mar &amp; Christmas con identidad de marca.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>09 · Altares de Muertos</h3>
                     <p class="p-wh">Altar monumental iluminado con elementos de marca — Altares en el Mar.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>10 · Datos Segmentados</h3>
                     <p class="p-wh">Acceso a métricas e inteligencia de audiencia + activación social local.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>11 · 40 Embarcaciones</h3>
                     <p class="p-wh">Visibilidad de marca en 40 embarcaciones por festival en la bahía.</p>
                 </div>
-                <div class="card-dark">
+                <div class="card-dark fade-in">
                     <h3>12 · Cobertura Multiplataforma</h3>
                     <p class="p-wh">Medios locales, nacionales e internacionales · +50 aliados digitales.</p>
                 </div>
@@ -298,23 +355,23 @@
             <p>CORE-62 aporta un ecosistema completo de inteligencia operacional digital que transforma cada activación del festival en datos accionables, presencia orgánica y relaciones públicas de alta precisión.</p>
 
             <div class="grid-3">
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Autoridad Digital</h3>
                     <p>SEO especializado en náutica y turismo.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Relaciones Públicas</h3>
                     <p>Gestión de prensa digital y medios.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Producción Audiovisual</h3>
                     <p>Contenido de alto impacto.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>Analítica Avanzada</h3>
                     <p>Demografía, flujo, intereses, zona.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>+50 Aliados</h3>
                     <p>Red de difusión nacional coordinada.</p>
                 </div>
@@ -347,44 +404,54 @@
             <p>FNMX 2026 convoca a países, estados e instituciones internacionales como Invitados Especiales — construyendo una plataforma de diplomacia cultural, economía azul y cooperación marítima sin precedente. Cada invitado cuenta con micrositio dedicado, estrategia digital CORE-62, producción audiovisual y presencia en la red de +50 aliados.</p>
 
             <div class="grid-2">
-                <div class="card">
-                    <h3>🇵🇦 República de Panamá — País Invitado de Honor · Mar &amp; Christmas</h3>
+                <div class="card fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Panama/Coat_of_arms_of_Panama.svg.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558642084-fd07fae5282e?w=900&q=80';" alt="República de Panamá">
+                        <div class="boat-badges">
+                            <span class="boat-badge">País Invitado de Honor</span>
+                            <span class="boat-badge boat-badge-cap">Mar &amp; Christmas</span>
+                        </div>
+                    </div>
+                    <h3>🇵🇦 República de Panamá — País Invitado de Honor</h3>
                     <p>Donde dos océanos unen al mundo. Canal de Panamá, San Blas, Bocas del Toro y liderazgo en economía azul global.</p>
-                    <a href="alianzas/panama.html" class="btn-outline">Ver Micrositio →</a>
+                    <a href="alianzas/panama.html" class="btn-outline" style="margin-top:auto;">Ver Micrositio →</a>
                 </div>
-                <div class="card">
-                    <h3>🏛️ CONCANACO-SERVYTUR — Institución Invitada Nacional · 2026</h3>
+                <div class="card fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/3.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518638150340-f706e86654de?w=900&q=80';" alt="CONCANACO SERVYTUR">
+                        <div class="boat-badges">
+                            <span class="boat-badge">Alianza Nacional</span>
+                            <span class="boat-badge boat-badge-cap">Comercio y Turismo</span>
+                        </div>
+                    </div>
+                    <h3>🏛️ CONCANACO-SERVYTUR — Institución Invitada Nacional</h3>
                     <p>Confederación de Cámaras Nacionales de Comercio, Servicios y Turismo. El comercio organizado de México en el escenario náutico más poderoso del país.</p>
-                    <a href="alianzas/concanaco.html" class="btn-outline">Ver Micrositio →</a>
+                    <a href="alianzas/concanaco.html" class="btn-outline" style="margin-top:auto;">Ver Micrositio →</a>
                 </div>
-                <div class="card">
-                    <h3>🌊 El Retorno de Chalchiuhtlicue — Gran Cierre · Altares en el Mar 2026 · 2 Nov</h3>
-                    <p>Show náutico nocturno sin precedentes. Mitología mexica, atletismo olímpico y mensaje ambiental. Dirección: Pamela Toscano Millán. 50+ participantes en la Bahía de Cabo San Lucas.</p>
-                    <a href="cultura/chalchiuhtlicue.html" class="btn-outline">Ver Micrositio →</a>
+                <div class="card fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/4.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=900&q=80';" alt="El Retorno de Chalchiuhtlicue">
+                        <div class="boat-badges">
+                            <span class="boat-badge">2 de Noviembre 2026</span>
+                            <span class="boat-badge boat-badge-cap">50+ Atletas en el Mar</span>
+                        </div>
+                    </div>
+                    <h3>🌊 El Retorno de Chalchiuhtlicue — Gran Cierre</h3>
+                    <p>Show náutico nocturno sin precedentes. Mitología mexica, atletismo olímpico y mensaje ambiental. Dirección: Pamela Toscano Millán.</p>
+                    <a href="cultura/chalchiuhtlicue.html" class="btn-outline" style="margin-top:auto;">Ver Micrositio →</a>
                 </div>
-                <div class="card">
-                    <h3>🏙️ La Gran Trajinera de la CDMX — Ciudad Invitada de Honor · Altares en el Mar</h3>
-                    <p>Altar flotante monumental con la identidad cultural de la capital. La herencia de la Ciudad de México llevada al escenario náutico más exclusivo del Pacífico mexicano.</p>
-                    <a href="alianzas/cdmx-trajinera.html" class="btn-outline">Ver Micrositio →</a>
+                <div class="card fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/img_trajinera_cdmx.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1512813195386-6cf811ad3542?w=900&q=80';" alt="La Gran Trajinera de la CDMX">
+                        <div class="boat-badges">
+                            <span class="boat-badge">Ciudad Invitada de Honor</span>
+                            <span class="boat-badge boat-badge-cap">Centro Permanente 365</span>
+                        </div>
+                    </div>
+                    <h3>🏙️ La Gran Trajinera de la CDMX — Ciudad Invitada de Honor</h3>
+                    <p>Altar flotante monumental con la identidad cultural de la capital. La herencia de la Ciudad de México llevada al Pacífico mexicano.</p>
+                    <a href="alianzas/cdmx-trajinera.html" class="btn-outline" style="margin-top:auto;">Ver Micrositio →</a>
                 </div>
-            </div>
-
-            <!-- DESGLOSE ÍNTEGRO DE LOS 4 ACTOS DE CHALCHIUHTLICUE -->
-            <div class="highlight-box">
-                <h4>Espectáculo Insignia (2 de Noviembre 2026): El Retorno de Chalchiuhtlicue y las Guardianas de la Ofrenda Azul</h4>
-                <p>Dirección Artística: Pamela Toscano Millán (Atleta Olímpica París 2024). Una producción de 15 minutos con más de 50 participantes en el mar distribuidos en 5 círculos concéntricos (La Chalupa de Oceánida, Stephanie Montero, Débora Sáenz, Baja Nereidas, Sirenas del Cortés, Sirenas de Isla Natividad, Sub Paddle Catrinas y Caboland Wave Runners) que transforma la Bahía de Cabo San Lucas en un altar vivo a través de 4 Actos Narrativos:</p>
-                <ul>
-                    <li><strong>Acto 01 · Apertura — El Cruce (Misterioso · Onírico · Ancestral — Paddleboard Artístico · SUP):</strong> Una embarcación llega del horizonte. Un gran anillo naranja vivo de cempasúchil rodea la nave en el agua, marcando el umbral entre los vivos y el Mictlán. El mundo moderno y el universo prehispánico se fusionan en la oscuridad de la noche.</li>
-                    <li><strong>Acto 02 · Clímax de Belleza — El Despertar (Majestuoso · Festivo · Asombro — Natación Artística · Sirenas Monoaleta):</strong> Chalchiuhtlicue emerge del agua. Su presencia llena la bahía de luz jade y cempasúchil. Coreografía geométrica: natación artística, sirenas de monoaleta y motos acuáticas decoradas en perfecta sincronía forman figuras que emocionan tanto por su belleza como por su precisión.</li>
-                    <li><strong>Acto 03 · Clímax Dramático — La Tormenta (Tenso · Oscuro · Confrontacional — Toda la Compañía · Motos Acuáticas):</strong> La armonía se rompe de golpe. Una fuerza invasora irrumpe representando el daño humano al ecosistema marino. Las criaturas marinas reaccionan con vulnerabilidad. Chalchiuhtlicue desata toda su fuerza: una batalla que el agua termina ganando.</li>
-                    <li><strong>Acto 04 · Desenlace — El Pacto y Éxodo hacia la Orilla (Esperanzador · Épico · Emotivo — Toda la Compañía · Fuegos Artificiales):</strong> La reconciliación entre la humanidad y el océano. Todos los artistas y embarcaciones unidos en una estrella marina humana sobre el agua, bañada en luz dorada. El cielo festeja con fuego y la compañía inicia el desfile procesional hacia la playa de El Médano.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>¿Desea participar como Invitado Especial?</h3>
-                <p>CORE-62 coordina el proceso de invitación, micrositio y activación digital para países, estados, instituciones y organizaciones.</p>
-                <a href="mailto:festivalesnauticos@core-62.com" class="btn-gold">Solicitar Información</a>
             </div>
         </div>
     </section>
@@ -398,179 +465,263 @@
                 <span class="chap-t">MODELO DE PATROCINIO DE ANDADORES · SOLO 10 ESPACIOS DISPONIBLES</span>
             </div>
             <h2 class="h-serif">Tu marca navega en el desfile más exclusivo de México</h2>
-            <p class="p-wh">Adopta un circuito completo: un andador de alto flujo peatonal en la Marina de Cabo San Lucas, una embarcación decorada y tematizada, y un Barco de Papel como pieza artística icónica — garantizando presencia física, emocional y digital durante todo el festival. Próximas ediciones: 2025 · 2026 · 2027 · 2028 · 2029 · Cabo San Lucas, BCS · 1, 2, 3 y 4 de noviembre.</p>
-            <p class="p-wh">+25,000 Asistentes directos · 1M Impactos digitales · 12h Activación diaria 3 días · 2 Escenarios mar + tierra · 100% Exclusividad de giro · SECTUR / SEMAR · SE · SRE.</p>
+            <p class="p-wh">Adopta un circuito completo: un andador de alto flujo peatonal en la Marina de Cabo San Lucas, una embarcación decorada y tematizada, y un Barco de Papel como pieza artística icónica — garantizando presencia física, emocional y digital durante todo el festival.</p>
 
-            <div class="grid-3">
-                <div class="card-dark">
-                    <h3>🏷️ Naming Exclusivo</h3>
-                    <p class="p-wh">Andador "Pez Vela presentado por [Tu Marca]" — derecho de nombre oficial.</p>
-                </div>
-                <div class="card-dark">
-                    <h3>⛵ Embarcación Tematizada</h3>
-                    <p class="p-wh">Recorrido náutico de 3h con activaciones, tripulación caracterizada y branding total.</p>
-                </div>
-                <div class="card-dark">
-                    <h3>🎭 Barco de Papel</h3>
-                    <p class="p-wh">Foto opportunity artístico icónico con identidad de tu marca.</p>
-                </div>
-                <div class="card-dark">
-                    <h3>📺 Presencia 360°</h3>
-                    <p class="p-wh">Prensa nacional e internacional, redes sociales, influencers y material oficial.</p>
-                </div>
-                <div class="card-dark">
-                    <h3>🎬 Contenido Audiovisual</h3>
-                    <p class="p-wh">Video oficial, reels, fotografía profesional y acceso VIP a experiencias premium.</p>
-                </div>
-                <div class="card-dark">
-                    <h3>⚓ Exclusividad Total</h3>
-                    <p class="p-wh">Solo un patrocinador por barco y andador — 100% exclusividad de giro comercial.</p>
-                </div>
-            </div>
-
-            <h2 class="h-serif">Elige tu embarcación — Las 10 embarcaciones del desfile náutico</h2>
+            <h3 class="h-serif" style="color:var(--gold-l); margin-top:2rem;">Elige tu embarcación — Las 10 embarcaciones del desfile náutico</h3>
             <p class="p-wh">Cada embarcación tiene su propio carácter, capacidad y experiencia a bordo. Solo un patrocinador por barco — exclusividad total de giro comercial.</p>
 
             <div class="fest-grid">
-                <div class="card-dark">
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/1.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?w=700&q=80';" alt="01 ANDREIKA Velero Clásico">
+                        <div class="boat-badges">
+                            <span class="boat-badge">100 ft eslora · 26 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">15 invitados</span>
+                        </div>
+                    </div>
                     <h3>01 · ANDREIKA — Velero Clásico</h3>
-                    <p class="p-wh"><strong>Velero Tipo Pirata · Madera · 100 ft eslora · 26 ft manga · 15 invitados.</strong></p>
                     <p class="p-wh">Espectacular velero clásico construido en madera, tipo pirata, listo para extender sus velas e iniciar la diversión. El ícono visual del desfile náutico.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Bebida bienvenida, Música a bordo, Barra nacional, Catrina anfitriona, Maquillista, Camarógrafo, Activación de marca.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/2.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=700&q=80';" alt="02 CABO WAVE Catamarán">
+                        <div class="boat-badges">
+                            <span class="boat-badge">73 ft eslora · 27.8 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">15 invitados</span>
+                        </div>
+                    </div>
                     <h3>02 · CABO WAVE — Catamarán</h3>
-                    <p class="p-wh"><strong>Catamarán 2 Pisos · Acero · 73 ft eslora · 27.8 ft manga · 15 invitados.</strong></p>
                     <p class="p-wh">Dinámico catamarán de dos pisos con baños, área de comedor y bar, construido en acero — listo para una vibrante fiesta a bordo en el corazón del desfile.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos y postres, Barra nacional, Menú típico, Catrina anfitriona, Camarógrafo.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/3.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=700&q=80';" alt="03 CABO ESCAPE Catamarán Premium">
+                        <div class="boat-badges">
+                            <span class="boat-badge">90 ft eslora · 36 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">20 invitados</span>
+                        </div>
+                    </div>
                     <h3>03 · CABO ESCAPE — Catamarán Premium</h3>
-                    <p class="p-wh"><strong>Catamarán 2 Niveles · Gran Capacidad · 90 ft eslora · 36 ft manga · 20 invitados.</strong></p>
                     <p class="p-wh">Catamarán con dos niveles, baños, cocina y gran zona de alimentos. El ambiente está presente desde el primer minuto garantizando toda la diversión del desfile.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos y postres, Barra nacional, Menú típico, Catrina anfitriona, Camarógrafo.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/4.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=700&q=80';" alt="04 LOVE SHACK Yate Bluewater">
+                        <div class="boat-badges">
+                            <span class="boat-badge">72 ft eslora · 16 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">35 pasajeros</span>
+                        </div>
+                    </div>
                     <h3>04 · LOVE SHACK — Yate Bluewater</h3>
-                    <p class="p-wh"><strong>Yate 2 Pisos · Marca Bluewater · 72 ft eslora · 16 ft manga · 35 pasajeros.</strong></p>
                     <p class="p-wh">Hermoso yate de dos pisos marca Bluewater con amplios espacios, cocina, bar, 2 suites, 2 baños y sonido envolvente. La experiencia más exclusiva del desfile.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos y postres, Barra premium, Menú típico, 2 Catrinas anfitrionas, Camarógrafo.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/5.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500930287596-c1ecaa373bb2?w=700&q=80';" alt="05 LA ISLA Catamarán Boutique">
+                        <div class="boat-badges">
+                            <span class="boat-badge">35 ft eslora · 14.8 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">8 pasajeros</span>
+                        </div>
+                    </div>
                     <h3>05 · LA ISLA — Catamarán Boutique</h3>
-                    <p class="p-wh"><strong>Catamarán Madera · Fibra de Vidrio · 35 ft eslora · 14.8 ft manga · 8 pasajeros.</strong></p>
                     <p class="p-wh">Novedoso catamarán de madera y fibra de vidrio para una navegación suave. Baño, barra, amplia sala con cómodos sillones y sonido ambiental — exclusividad boutique.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos y postres, Barra nacional, Menú típico, Catrina anfitriona, Maquillista.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/6.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=700&q=80';" alt="06 MI DHARMA Yate de Lujo">
+                        <div class="boat-badges">
+                            <span class="boat-badge">46 ft eslora · 14.4 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">14 pasajeros</span>
+                        </div>
+                    </div>
                     <h3>06 · MI DHARMA — Yate de Lujo</h3>
-                    <p class="p-wh"><strong>Yate de Lujo · A/C · Cocina · 46 ft eslora · 14.4 ft manga · 14 pasajeros.</strong></p>
                     <p class="p-wh">Hermoso yate de lujo con baño completo, bar, aire acondicionado y cocina. Una excelente opción para navegar por la bahía en el máximo confort durante el desfile.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos y postres, Barra premium, Menú típico, Catrina anfitriona, Camarógrafo.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/7.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=700&q=80';" alt="07 CHICA 1 Cruiser Express">
+                        <div class="boat-badges">
+                            <span class="boat-badge">42 ft eslora · 14 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">14 pasajeros</span>
+                        </div>
+                    </div>
                     <h3>07 · CHICA 1 — Cruiser Express</h3>
-                    <p class="p-wh"><strong>Yate Cruiser Express · Lujo · 42 ft eslora · 14 ft manga · 14 pasajeros.</strong></p>
                     <p class="p-wh">Yate de lujo marca Cruiser Express con cocina, bar, amplios espacios y sonido ambiental. Navegación suave y elegante para una experiencia extraordinaria en el desfile.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos y postres, Barra premium, Menú típico, Catrina anfitriona, Activación de marca.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/8.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=700&q=80';" alt="08 CABO KLUB Sea Ray USA">
+                        <div class="boat-badges">
+                            <span class="boat-badge">44.8 ft eslora · 13.8 ft manga</span>
+                            <span class="boat-badge boat-badge-cap">13 invitados</span>
+                        </div>
+                    </div>
                     <h3>08 · CABO KLUB — Sea Ray · USA</h3>
-                    <p class="p-wh"><strong>Yate Sea Ray · 2 Suites · Lujo Total · 44.8 ft eslora · 13.8 ft manga · 13 invitados.</strong></p>
                     <p class="p-wh">Uno de los mejores yates del destino, fabricado en EE.UU. por Sea Ray. Alto lujo, cocina, baño, 2 suites, amplios espacios y música ambiental para la experiencia definitiva.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos y postres, Barra premium, Menú típico, Catrina anfitriona, Maquillista, Camarógrafo.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/9.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&q=80';" alt="09 FLOTA PESCA Deportiva">
+                        <div class="boat-badges">
+                            <span class="boat-badge">27 ft eslora · 10 unidades</span>
+                            <span class="boat-badge boat-badge-cap">10 pax / unidad</span>
+                        </div>
+                    </div>
                     <h3>09 · FLOTA PESCA — Pesca Deportiva</h3>
-                    <p class="p-wh"><strong>Embarcación de Pesca Deportiva · 10 unidades · 27 ft eslora · 9.7 ft manga · 10 pasajeros.</strong></p>
                     <p class="p-wh">Embarcación de pesca deportiva equipada con baño, cabina y sonido ambiental — versátil, segura y llena de diversión. Flota de 10 unidades en el desfile náutico.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Mixología bienvenida, Música a bordo, Bocadillos, Barra nacional, Menú típico, Catrina anfitriona, Maquillista.</li>
                     </ul>
                 </div>
-                <div class="card-dark">
+
+                <div class="card-dark fade-in">
+                    <div class="card-img">
+                        <img src="/assets/img/Galeria_Altares/10.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80';" alt="10 FLOTA PANGA Tradición Náutica">
+                        <div class="boat-badges">
+                            <span class="boat-badge">12 m eslora · 10 unidades</span>
+                            <span class="boat-badge boat-badge-cap">13 pax / unidad</span>
+                        </div>
+                    </div>
                     <h3>10 · FLOTA PANGA — Tradición Náutica</h3>
-                    <p class="p-wh"><strong>Panga Decorada · 10 unidades · 12 m eslora · 2.4 m manga · 13 pasajeros.</strong></p>
                     <p class="p-wh">La panga es el alma del México náutico — sencilla, segura y llena de diversión. Decorada y tematizada para Día de Muertos, es la embarcación más auténtica y querida del desfile.</p>
                     <ul>
                         <li>Incluye: Render de decoración, Ceviche y refrescos, Tripulación caracterizada, Activación de marca, Montaje y desmontaje.</li>
                     </ul>
                 </div>
             </div>
+
+            <!-- GALERÍA FOTOGRÁFICA ALTARES EN EL MAR (11 IMÁGENES DE DRIVE) -->
+            <div style="margin-top:3.5rem;">
+                <h3 class="h-serif" style="color:var(--gold-l);">Galería Oficial — Altares en el Mar y Embarcaciones Intervenidas</h3>
+                <p class="p-wh">Imágenes del respaldo oficial (`Galeria_Altares/1.png` a `11.png` y `Velero_Montana.jfif`).</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="/assets/img/Galeria_Altares/1.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&q=80';" alt="Galería Altares 1"></div>
+                    <div class="gallery-item"><img src="/assets/img/Galeria_Altares/2.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=500&q=80';" alt="Galería Altares 2"></div>
+                    <div class="gallery-item"><img src="/assets/img/Galeria_Altares/3.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=500&q=80';" alt="Galería Altares 3"></div>
+                    <div class="gallery-item"><img src="/assets/img/Galeria_Altares/4.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=500&q=80';" alt="Galería Altares 4"></div>
+                    <div class="gallery-item"><img src="/assets/img/Galeria_Altares/5.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500930287596-c1ecaa373bb2?w=500&q=80';" alt="Galería Altares 5"></div>
+                    <div class="gallery-item"><img src="/assets/img/Velero_Montana.jfif" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&q=80';" alt="Velero Montana"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SUBSECCIÓN CAPÍTULO 07: LOS 10 ANDADORES EN TIERRA -->
+
+    <!-- PUNTO 5: SUBSECCIÓN CAPÍTULO 07.B — LOS 10 ANDADORES EN TIERRA Y MAPA SATELITAL INTERACTIVO -->
     <section class="s-cream" id="andadores">
         <div class="inner">
             <div class="chap">
                 <span class="chap-n">07.B</span>
                 <div class="chap-l"></div>
-                <span class="chap-t">LOS 10 ANDADORES EN TIERRA</span>
+                <span class="chap-t">LOS 10 ANDADORES EN TIERRA · MAPA SATELITAL INTERACTIVO</span>
             </div>
             <h2 class="h-serif">Tu andador en la Marina — alto tráfico turístico</h2>
-            <p>Cada andador incluye espacios físicos diferenciados, tematizados y de alto flujo peatonal durante los 3 días del festival. 10 Espacios exclusivos. Sin competencia de categoría: cada marca obtiene exclusividad total de giro comercial en su andador y embarcación.</p>
+            <p>Cada andador incluye espacios físicos diferenciados, tematizados y de alto flujo peatonal durante los días del festival. 10 Espacios exclusivos con exclusividad total de giro comercial.</p>
 
             <div class="fest-grid">
-                <div class="card">
+                <div class="card fade-in">
                     <h3>⚓ Andador Marlin</h3>
                     <p>1 túnel decorativo 35m · 3 puntos de exposición (2×2m) · 1 altar de muertos (4×2m).</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🐟 Andador Pez Vela</h3>
                     <p>6 puntos Catrina/Alebrije · 1 punto frente a letras "CABO" · Exposición de altares de locatarios.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>✨ Andador Dorado</h3>
                     <p>15 espacios de venta · 1 escenario artístico (5×5m) · Zona de tablas de surf · Bar de cerveza.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🐠 Andador Barracuda</h3>
                     <p>8 puntos Catrina · 10 carpas pueblos/puertos mágicos · 25 altares · 1 escenario (10×5m).</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🐡 Andador Atún</h3>
                     <p>6 puntos catrina/foto opportunity (2×2m) · Carpas exposición 3×3m · Programación cultural.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🐟 Andador Mero</h3>
                     <p>6 puntos de activación/foto opportunity · 1 escenario (10×5m, solo 2 de noviembre).</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🦈 Andador Tiburón</h3>
                     <p>4 puntos Catrina/foto opportunity · 2 activaciones de marca (solo día del desfile).</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🦅 Andador Pelícano</h3>
                     <p>4 puntos Catrina/foto opportunity · 3 activaciones de marca (solo día del desfile).</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🦭 Andador Foca</h3>
                     <p>4 puntos Catrina/foto opportunity · 3 activaciones (solo día del desfile).</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in">
                     <h3>🐬 Andador Delfín / Escollera</h3>
                     <p>2 Catrinas monumentales de 10 metros de altura — 1 en cada escollera Norte y Sur.</p>
                 </div>
             </div>
+
+            <!-- VISOR SATELITAL EMBEBIDO CON FILTROS POR ANDADOR -->
+            <div class="map-showcase">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+                    <div>
+                        <h3 class="h-serif" style="color:var(--gold-l); margin-bottom:0.25rem;">🗺️ Mapa Satelital Interactivo — Marina de Cabo San Lucas</h3>
+                        <p class="p-wh" style="margin-bottom:0; font-size:0.9rem;">Haz clic en cualquier andador para enfocar su ubicación exacta vía satélite:</p>
+                    </div>
+                    <a href="/mapa_interactivo/mapa-festivales-nauticos.html" target="_blank" class="btn-gold" style="padding:0.55rem 1.1rem; font-size:0.82rem;">Abrir Mapa en Pantalla Completa ↗</a>
+                </div>
+                <div class="map-filter-bar">
+                    <button type="button" class="map-filter-btn active" data-andador="">Ver Todos</button>
+                    <button type="button" class="map-filter-btn" data-andador="marlin">⚓ Marlin</button>
+                    <button type="button" class="map-filter-btn" data-andador="pezvela">🐟 Pez Vela</button>
+                    <button type="button" class="map-filter-btn" data-andador="dorado">✨ Dorado</button>
+                    <button type="button" class="map-filter-btn" data-andador="barracuda">🐠 Barracuda</button>
+                    <button type="button" class="map-filter-btn" data-andador="atun">🐡 Atún</button>
+                    <button type="button" class="map-filter-btn" data-andador="mero">🐟 Mero</button>
+                    <button type="button" class="map-filter-btn" data-andador="tiburon">🦈 Tiburón</button>
+                    <button type="button" class="map-filter-btn" data-andador="pelicano">🦅 Pelícano</button>
+                    <button type="button" class="map-filter-btn" data-andador="foca">🦭 Foca</button>
+                    <button type="button" class="map-filter-btn" data-andador="delfin">🐬 Delfín</button>
+                </div>
+                <div class="map-iframe-wrap">
+                    <iframe id="andadoresMapFrame" src="/mapa_interactivo/mapa-festivales-nauticos.html?embed=1" title="Mapa Satelital de Andadores FNMX 2026" loading="lazy"></iframe>
+                </div>
+            </div>
         </div>
     </section>
+
 
     <!-- CAPÍTULO 08: SOLICITUD DE PATROCINIO -->
     <section class="s-sand" id="patrocinio">
@@ -645,20 +796,19 @@
                             <input type="tel" id="telefono" name="telefono" required>
                         </div>
                         <div>
-                            <label for="embarcacion">Embarcación(es) de interés</label>
-                            <select id="embarcacion" name="embarcacion">
-                                <option value="">Selecciona una embarcación</option>
-                                <option value="01 - ANDREIKA">01 · ANDREIKA — Velero Clásico</option>
-                                <option value="02 - CABO WAVE">02 · CABO WAVE — Catamarán</option>
-                                <option value="03 - CABO ESCAPE">03 · CABO ESCAPE — Catamarán Premium</option>
-                                <option value="04 - LOVE SHACK">04 · LOVE SHACK — Yate Bluewater</option>
-                                <option value="05 - LA ISLA">05 · LA ISLA — Catamarán Boutique</option>
-                                <option value="06 - MI DHARMA">06 · MI DHARMA — Yate de Lujo</option>
-                                <option value="07 - CHICA 1">07 · CHICA 1 — Cruiser Express</option>
-                                <option value="08 - CABO KLUB">08 · CABO KLUB — Sea Ray USA</option>
-                                <option value="09 - FLOTA PESCA">09 · FLOTA PESCA — Pesca Deportiva (10 unidades)</option>
-                                <option value="10 - FLOTA PANGA">10 · FLOTA PANGA — Tradición Náutica (10 unidades)</option>
-                            </select>
+                            <label>Embarcación(es) de interés (puedes marcar varias opciones)</label>
+                            <div class="form-checkgroup">
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="01 - ANDREIKA (Velero Clásico)"> 01 · ANDREIKA (100 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="02 - CABO WAVE (Catamarán)"> 02 · CABO WAVE (73 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="03 - CABO ESCAPE (Catamarán)"> 03 · CABO ESCAPE (90 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="04 - LOVE SHACK (Yate Bluewater)"> 04 · LOVE SHACK (72 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="05 - LA ISLA (Catamarán Boutique)"> 05 · LA ISLA (35 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="06 - MI DHARMA (Yate de Lujo)"> 06 · MI DHARMA (46 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="07 - CHICA 1 (Cruiser Express)"> 07 · CHICA 1 (42 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="08 - CABO KLUB (Sea Ray USA)"> 08 · CABO KLUB (44.8 ft)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="09 - FLOTA PESCA (10 unidades)"> 09 · FLOTA PESCA (10 uds)</label>
+                                <label class="form-check"><input type="checkbox" name="embarcacion" value="10 - FLOTA PANGA (10 unidades)"> 10 · FLOTA PANGA (10 uds)</label>
+                            </div>
                         </div>
                         <div>
                             <label for="inversion">Inversión estimada</label>
@@ -704,6 +854,10 @@
             <p class="p-wh">© 2026 Festivales Náuticos MX · Estrategia Digital CORE-62 · core-62.com · Los Cabos, BCS, México</p>
         </div>
     </footer>
+
+    <!-- SCRIPTS EXTERNOS (SIN JAVASCRIPT INLINE EN EL HTML) -->
+    <script src="/js/main.js"></script>
+    <script src="/js/forms.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Satelital de Andadores — Marina Cabo San Lucas | FNMX 2026</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body { margin: 0; background: #091724; color: #fff; font-family: 'DM Sans', sans-serif; }
+        .map-layout { display: grid; grid-template-columns: 320px 1fr; height: 100vh; }
+        .map-sidebar { background: #0c2d45; border-right: 2px solid #c8a030; padding: 1.25rem; overflow-y: auto; }
+        .map-sidebar h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #e8c860; margin-bottom: 0.4rem; }
+        .map-sidebar p { color: #a8d8e8; font-size: 0.85rem; margin-bottom: 1rem; }
+        .andador-btn {
+            display: flex; align-items: center; justify-content: space-between;
+            width: 100%; text-align: left; padding: 0.65rem 0.85rem; margin-bottom: 0.45rem;
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(200,160,48,0.28);
+            border-left: 5px solid var(--gold); border-radius: 6px; color: #fff; cursor: pointer;
+            font-size: 0.86rem; font-weight: 600; transition: all 0.2s ease;
+        }
+        .andador-btn:hover, .andador-btn.active { background: rgba(200,160,48,0.22); transform: translateX(3px); }
+        #caboMap { width: 100%; height: 100%; }
+        body.embed-mode .map-layout { grid-template-columns: 1fr; }
+        body.embed-mode .map-sidebar { display: none; }
+        @media (max-width: 768px) {
+            .map-layout { grid-template-columns: 1fr; grid-template-rows: 42vh 58vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="map-layout">
+        <aside class="map-sidebar">
+            <h2>🗺️ Marina Cabo San Lucas</h2>
+            <p>Selecciona un andador para ubicar su circuito en la bahía:</p>
+            <div id="andadorList"></div>
+            <a href="/" class="btn-outline" style="width:100%; margin-top:1rem; font-size:0.82rem;">← Volver a la Plataforma</a>
+        </aside>
+        <div id="caboMap"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/js/map-init.js"></script>
+</body>
+</html>

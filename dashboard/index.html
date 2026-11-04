@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORE-62 | Dashboard Operativo Privado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body { background: #0c1e2e; color: white; }
+        .dash-wrap { max-width: 1280px; margin: 2.5rem auto; padding: 0 1.5rem; }
+        .dash-grid { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; }
+        .sidebar { background: #162f42; padding: 22px; border-radius: 10px; border: 1px solid rgba(200,160,48,0.25); }
+        .main-panel { background: #162f42; padding: 26px; border-radius: 10px; border: 1px solid rgba(200,160,48,0.25); }
+        .sidebar ul li::before { content: none; }
+        .sidebar ul li { padding-left: 0; margin-bottom: 12px; color: #a8d8e8; font-size: 0.95rem; }
+        table th { background: #091724; color: #e8c860; }
+        table td { color: #e2e8f0; border-bottom: 1px solid #2a5068; }
+        .tag-success { background: #2ecc71; padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #000; font-weight: bold; }
+        .tag-pending { background: #f1c40f; padding: 4px 10px; border-radius: 12px; font-size: 12px; color: #000; font-weight: bold; }
+        .btn-view { background: rgba(232,200,96,0.12); color: #e8c860; padding: 6px 12px; border-radius: 5px; font-size: 13px; border: 1px solid rgba(232,200,96,0.4); text-decoration: none; font-weight: 600; display: inline-block; }
+        .btn-view:hover { background: #c8a030; color: #0c1e2e; }
+        @media (max-width: 860px) { .dash-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="nav-brand"><span>CORE-62 · <span>DASHBOARD PRIVADO</span></span></div>
+            <div class="nav-div"></div>
+            <ul class="nav-links">
+                <li><a href="#estados">Propuestas Estados</a></li>
+                <li><a href="#marcas">Propuestas Marcas</a></li>
+                <li><a href="#leads">Solicitudes Recibidas</a></li>
+            </ul>
+            <a href="/" class="nav-cta">← Salir al Sitio Público</a>
+        </div>
+    </nav>
+
+    <div class="dash-wrap">
+        <div class="dash-grid">
+            <aside class="sidebar">
+                <h3 style="color:#e8c860; border-bottom: 1px solid #2a5068; padding-bottom:10px; margin-bottom:14px;">Resumen Ejecutivo</h3>
+                <ul>
+                    <li>📊 <strong>4</strong> Estados en Dashboard</li>
+                    <li>🏢 <strong>4</strong> Marcas en Dashboard</li>
+                    <li>🔒 Acceso Protegido CORE-62</li>
+                </ul>
+            </aside>
+
+            <main class="main-panel">
+                <h2 id="estados" class="h-serif" style="color:#e8c860; font-size:1.6rem;">Propuestas Institucionales (Estados SECTUR)</h2>
+                <table>
+                    <thead>
+                        <tr><th>Estado</th><th>Propuesta Estratégica</th><th>Estatus</th><th>Acción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Baja California Sur</strong></td>
+                            <td>Estado Anfitrión y Sede Oficial en Los Cabos</td>
+                            <td><span class="tag-success">Confirmada</span></td>
+                            <td><a href="/dashboard/estados/bcs.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Michoacán</strong></td>
+                            <td>El alma de México se vive en el mar</td>
+                            <td><span class="tag-success">Presentada</span></td>
+                            <td><a href="/dashboard/estados/michoacan.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Puebla</strong></td>
+                            <td>Historia, sabor y tradición en el mar</td>
+                            <td><span class="tag-pending">En seguimiento</span></td>
+                            <td><a href="/dashboard/estados/puebla.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Querétaro</strong></td>
+                            <td>Historia, Viñedos y Tradición (Ruta Arte, Queso y Vino)</td>
+                            <td><span class="tag-success">Confirmada</span></td>
+                            <td><a href="/dashboard/estados/queretaro.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="marcas" class="h-serif" style="color:#e8c860; font-size:1.6rem; margin-top: 2.5rem;">Propuestas Comerciales (Marcas B2B)</h2>
+                <table>
+                    <thead>
+                        <tr><th>Marca</th><th>Proyecto</th><th>Estatus</th><th>Acción</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>EXA FM</strong></td>
+                            <td>EXA Music Boat 2027 (8 formatos)</td>
+                            <td><span class="tag-pending">En negociación</span></td>
+                            <td><a href="/dashboard/marcas/exa-fm.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>BBVA</strong></td>
+                            <td>BBVA Bonos Azules &amp; Economía Azul</td>
+                            <td><span class="tag-pending">Pendiente</span></td>
+                            <td><a href="/dashboard/marcas/bbva.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nu México</strong></td>
+                            <td>Experiencia Cashless &amp; Nuevas Generaciones</td>
+                            <td><span class="tag-pending">Pendiente</span></td>
+                            <td><a href="/dashboard/marcas/nu-mexico.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>CONCANACO-SERVYTUR</strong></td>
+                            <td>Alianza Comercial y Cámaras Afiliadas</td>
+                            <td><span class="tag-success">Confirmada</span></td>
+                            <td><a href="/dashboard/marcas/concanaco.html" class="btn-view">Abrir Propuesta →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="leads" class="h-serif" style="color:#e8c860; font-size:1.6rem; margin-top: 2.5rem;">Registros de Formularios Recibidos (/api/leads)</h2>
+                <div id="leadsContainer" style="margin-top:1rem; font-size:0.9rem; color:#a8d8e8;">
+                    Cargando solicitudes registradas...
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        fetch('/api/leads')
+            .then(r => r.json())
+            .then(leads => {
+                const container = document.getElementById('leadsContainer');
+                if (!leads || leads.length === 0) {
+                    container.innerHTML = '<p style="color:#a8d8e8;">Aún no se han recibido envíos desde los formularios del sitio.</p>';
+                    return;
+                }
+                let rows = leads.slice().reverse().map(l => `
+                    <tr>
+                        <td>${new Date(l.fecha).toLocaleString('es-MX')}</td>
+                        <td><strong>${l.formulario}</strong></td>
+                        <td>${l.nombre || '-'} (${l.empresa || l.institucion || l.camara || '-'})</td>
+                        <td>${l.email || '-'} / ${l.telefono || '-'}</td>
+                        <td>${l.embarcacion || l.tipo || l.area || '-'}</td>
+                    </tr>
+                `).join('');
+                container.innerHTML = `
+                    <table>
+                        <thead>
+                            <tr><th>Fecha</th><th>Formulario</th><th>Contacto / Entidad</th><th>Correo / Tel</th><th>Interés</th></tr>
+                        </thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                `;
+            })
+            .catch(() => {
+                document.getElementById('leadsContainer').innerHTML = '<p>No se pudieron cargar los registros.</p>';
+            });
+    </script>
+</body>
+</html>
