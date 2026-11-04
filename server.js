@@ -81,11 +81,11 @@ app.get('/api/leads', verifyCore62Auth, (req, res) => {
 
 // RUTAS ESTÁTICAS (FRONTEND PÚBLICO Y DASHBOARD PRIVADO)
 // 1. CAPA PÚBLICA: Sirve /frontend
-const frontendPath = path.resolve(__dirname, '../frontend');
+const frontendPath = path.resolve(__dirname, './frontend');
 app.use(express.static(frontendPath));
 
 // 2. CAPA PRIVADA UNIFICADA: Sirve /dashboard (incluye index.html, /estados y /marcas)
-const dashboardPath = path.resolve(__dirname, '../dashboard');
+const dashboardPath = path.resolve(__dirname, './dashboard');
 app.use('/dashboard', verifyCore62Auth, express.static(dashboardPath));
 
 app.listen(PORT, () => {
