@@ -1,6 +1,7 @@
 require('dotenv').config({ path: './config/.env' });
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -88,8 +89,10 @@ app.use(express.static(frontendPath));
 const dashboardPath = path.resolve(__dirname, './dashboard');
 app.use('/dashboard', verifyCore62Auth, express.static(dashboardPath));
 
-app.listen(PORT, () => {
-    console.log(`🚀 Servidor CORE-62 activo en http://localhost:${PORT}`);
-    console.log(`🌐 Sitio Público: http://localhost:${PORT}/`);
+// INICIO DEL SERVIDOR: Escuchando en 0.0.0.0 para permitir acceso en red local
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Servidor CORE-62 activo en el puerto ${PORT}`);
+    console.log(`🌐 Acceso local: http://localhost:${PORT}/`);
+    console.log(`📡 Acceso en red: http://192.168.1.88:${PORT}/`);
     console.log(`🔒 Dashboard y Propuestas Privadas: http://localhost:${PORT}/dashboard`);
 });

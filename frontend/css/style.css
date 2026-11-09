@@ -1,18 +1,18 @@
 :root {
-    --navy: #0c2d45;
-    --ocean: #0d4a6e;
-    --teal: #1a7a9a;
-    --aqua: #2daab8;
-    --sky: #a8d8e8;
-    --sand: #f0e8d0;
-    --cream: #faf6ee;
-    --gold: #c8a030;
-    --gold-l: #e8c860;
+    --navy: #102a43;
+    --ocean: #1a4971;
+    --teal: #2cb1bc;
+    --aqua: #47e2e4;
+    --sky: #bae3ff;
+    --sand: #f8f9fa;
+    --cream: #ffffff;
+    --gold: #f5b027;
+    --gold-l: #ffcf54;
     --white: #ffffff;
-    --ink: #0c1e2e;
-    --ink-s: #1e3a4a;
-    --ink-m: #2a5068;
-    --fnmx-orange: #e07820;
+    --ink: #071524;
+    --ink-s: #1c3d5a;
+    --ink-m: #2b5478;
+    --fnmx-orange: #f07a25;
 }
 
 *, *::before, *::after {
@@ -229,7 +229,7 @@ nav {
 .nav-menu-btn {
     display: none;
     background: transparent;
-    border: 1px solid rgba(200, 160, 48, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--gold-l);
     font-size: 1.35rem;
     width: 40px;
@@ -290,7 +290,7 @@ nav {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('/assets/img/hero-arch.jpg'), url('https://media.traveler.es/photos/642157573da2de76531fb10e/16:9/w_2240,c_limit/The%20arch%204%20RGB%20retoc.jpg?w=1600&q=80');
+    background-image: url('https://media.traveler.es/photos/642157573da2de76531fb10e/16:9/w_2240,c_limit/The%20arch%204%20RGB%20retoc.jpg?w=1600&q=80');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -306,7 +306,7 @@ nav {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(115deg, rgba(6, 14, 26, 0.90) 0%, rgba(12, 45, 69, 0.78) 50%, rgba(13, 74, 110, 0.52) 100%);
+    background: linear-gradient(115deg, rgba(16, 42, 67, 0.88) 0%, rgba(26, 73, 113, 0.65) 50%, rgba(44, 177, 188, 0.35) 100%);
 }
 
 .hero-inner {
@@ -391,7 +391,7 @@ nav {
 
 /* CABECERA INTERNA (PARA PÁGINAS DE ALIANZAS Y PROPUESTAS) */
 .internal-header {
-    background: linear-gradient(135deg, var(--ink) 0%, var(--navy) 55%, var(--ocean) 100%);
+    background: var(--navy);
     color: var(--white);
     padding: 5rem 1.5rem 4rem;
     border-bottom: 4px solid var(--gold);
@@ -447,7 +447,7 @@ section, footer {
 }
 
 .s-dark {
-    background: linear-gradient(160deg, var(--ink) 0%, var(--navy) 65%, var(--ocean) 100%);
+    background: var(--navy);
     color: var(--white);
 }
 
@@ -532,7 +532,7 @@ section, footer {
 
 .card-dark {
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(200, 160, 48, 0.32);
+    border: 1px solid rgba(245, 176, 39, 0.4);
     border-top: 4px solid var(--gold);
     border-radius: 10px;
     padding: 1.75rem;
@@ -554,7 +554,7 @@ section, footer {
     height: 195px;
     border-radius: 8px 8px 0 0;
     overflow: hidden;
-    background: linear-gradient(135deg, #091e30 0%, #164f73 55%, #1a7a9a 100%);
+    background: linear-gradient(135deg, var(--ocean) 0%, var(--teal) 100%);
     border-bottom: 2px solid rgba(200, 160, 48, 0.35);
 }
 
@@ -587,7 +587,7 @@ section, footer {
     background: rgba(6, 16, 28, 0.86);
     backdrop-filter: blur(6px);
     color: var(--gold-l);
-    border: 1px solid rgba(200, 160, 48, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 0.2rem 0.65rem;
     border-radius: 999px;
     font-size: 0.73rem;
@@ -843,9 +843,14 @@ textarea {
 
 /* ANIMACIÓN SUAVE DE ENTRADA (.fade-in) */
 .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+body.js-ready .fade-in:not(.visible) {
     opacity: 0;
     transform: translateY(18px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .fade-in.visible {
@@ -879,4 +884,19 @@ textarea {
     .nav-links li, .nav-links a {
         width: 100%;
     }
+}
+.card-img.logo-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem 2.4rem;
+    background: radial-gradient(circle at center, rgba(44, 177, 188, 0.15) 0%, rgba(16, 42, 67, 0.8) 100%);
+}
+
+.card-img.logo-showcase img {
+    object-fit: contain;
+    max-height: 125px;
+    width: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.45));
 }
